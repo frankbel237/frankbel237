@@ -1,14 +1,4 @@
-from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.lang import Builder
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.uix.button import Button
-from kivy.uix.textinput import TextInput
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.button import MDRectangleFlatButton
 
-# Define the app screens
 class LoginScreen(Screen):
     def _init_(self, **kwargs):
         super()._init_(**kwargs)
@@ -96,9 +86,7 @@ class TrackingScreen(Screen):
             buttons=[MDRectangleFlatButton(text="OK", on_release=lambda x: dialog.dismiss())]
         )
         dialog.open()
-
-
-# Screen Manager
+        
 class ATAHmailApp(App):
     def build(self):
         sm = ScreenManager()
@@ -108,6 +96,6 @@ class ATAHmailApp(App):
         return sm
 
 
-# Run the app
+ Run the app
 if _name_ == "_main_":
     ATAHmailApp().run():
